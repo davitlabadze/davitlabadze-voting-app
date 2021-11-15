@@ -16,16 +16,16 @@
             </div>
             <div class="w-full mx-2 md:mx-4">
                 <h4 class="text-xl font-semibold">
-                    <a href="#" class="hover:underline">A random title can go here</a>
+                    <a href="#" class="hover:underline">{{ $idea->title }}</a>
                 </h4>
                 <div class="mt-3 text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet officia doloribus quibusdam dolorem quod velit repellat obcaecati doloremque, nulla iusto modi hic. Dolore possimus consequuntur et recusandae laboriosam? Esse, culpa.
+                    {{ $idea->description }}
                 </div>
                 <div class="flex flex-col justify-between mt-6 md:flex-row md:items-center">
                     <div class="flex items-center space-x-2 text-xs font-semibold text-gray-400">
-                        <div class="hidden font-bold text-gray-900 md:block">John Doe</div>
+                        <div class="hidden font-bold text-gray-900 md:block">{{ $idea->user->name }}</div>
                         <div class="hidden md:block">&bull;</div>
-                        <div>10 hours ago</div>
+                        <div>{{ $idea->created_at->diffForHumans() }}</div>
                         <div>&bull;</div>
                         <div>Category 1</div>
                         <div>&bull;</div>
@@ -85,7 +85,6 @@
                         <div>
                             <textarea name="post_comment" id="post_comment" cols="30" rows="4" class="w-full px-4 py-2 text-sm placeholder-gray-900 bg-gray-100 border-none rounded-xl" placeholder="Go ahead, don't be shy. Share your thoughts..."></textarea>
                         </div>
-
                         <div class="flex flex-col items-center md:flex-row md:space-x-3">
                             <button
                                 type="button"
@@ -246,7 +245,6 @@
                     <div class="mt-3 text-gray-600 line-clamp-3">
                         Lorem ipsum dolor sit amet consectetur.
                     </div>
-
                     <div class="flex items-center justify-between mt-6">
                         <div class="flex items-center space-x-2 text-xs font-semibold text-gray-400">
                             <div class="font-bold text-gray-900">John Doe</div>
