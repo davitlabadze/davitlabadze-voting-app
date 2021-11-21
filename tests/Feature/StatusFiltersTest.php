@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Http\Livewire\IdeasIndex;
 use App\Http\Livewire\StatusFilters;
 use App\Models\Category;
 use App\Models\Idea;
@@ -131,10 +132,12 @@ class StatusFiltersTest extends TestCase
             'status_id' => $statusInProgress->id,
         ]);
 
-        $response = $this->get(route('idea.index', ['status' => 'In Progress']));
-        $response->assertSuccessful();
-        $response->assertSee('<div class="px-4 py-2 font-bold leading-none text-center uppercase bg-yellow text-white rounded-full text-xxs w-28 h-7">In Progress</div>', false);
-        $response->assertDontSee('<div class="px-4 py-2 font-bold leading-none text-center uppercase bg-purple text-white rounded-full text-xxs w-28 h-7">Considering</div>', false);
+        Livewire::withQueryParams(['status' => 'In Progress'])
+        ->test(IdeasIndex::class)
+        ->assertViewHas('ideas', function ($ideas) {
+            return $ideas->count() === 3
+                && $ideas->first()->status->name === 'In Progress';
+        });
     }
 
     /** @test */
