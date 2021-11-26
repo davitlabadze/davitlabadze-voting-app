@@ -107,8 +107,6 @@ class AdminSetStatusTest extends TestCase
             ->set('notifyAllVoters', true)
             ->call('setStatus')
             ->assertEmitted('statusWasUpdated');
-        #TODO
-        //Does not work or works and is a problem in the program code
-        //Queue::assertPushed(NotifyAllVoters::class);
+        Queue::assertPushed(NotifyAllVoters::class);
     }
 }
