@@ -34,7 +34,7 @@ class SetStatus extends Component
             $this->notifyAllVoters();
         }
 
-        $this->emit('statusWasUpdated');
+        $this->emit('statusWasUpdated', 'Status was updated successfully!');
     }
 
     public function notifyAllVoters()
