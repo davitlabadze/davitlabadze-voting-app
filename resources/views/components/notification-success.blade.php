@@ -32,6 +32,9 @@
             Livewire.on('statusWasUpdated', message => {
                 showNotification(message)
             })
+            Livewire.on('commentWasAdded', message => {
+                showNotification(message)
+            })
         @endif"
     x-show="isOpen"
     x-transition:enter="transition ease-out duration-300"
