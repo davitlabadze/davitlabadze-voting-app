@@ -31,7 +31,7 @@
                     <div
                         class="flex items-center space-x-2 mt-4 md:mt-0"
                         x-data="{ isOpen: false }">
-                        <div class="px-4 py-2 font-bold leading-none text-center uppercase {{ $idea->status->classes }} rounded-full text-xxs w-28 h-7">{{ $idea->status->name }}</div>
+                        <div class="{{ 'status-'.Str::kebab($idea->status->name) }} text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">{{ $idea->status->name }}</div>
                         @auth
                             <div class="relative">
                                 <button

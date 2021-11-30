@@ -44,12 +44,12 @@
                     <div>&bull;</div>
                     <div>{{ $idea->category->name }}</div>
                     <div>&bull;</div>
-                    <div class="text-gray-900">{{ $idea->comments_count }} comments</div>
+                    <div wire:ignore class="text-gray-900">{{ $idea->comments_count }} comments</div>
                 </div>
                 <div
                     x-data="{ isOpen: false }"
                     class="flex items-center space-x-2 mt-4 md:mt-0">
-                    <div class="px-4 py-2 font-bold leading-none text-center uppercase {{ $idea->status->classes }} rounded-full text-xxs w-28 h-7">{{ $idea->status->name }}</div>
+                    <div class="{{ 'status-'.Str::kebab($idea->status->name) }} text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">{{ $idea->status->name }}</div>
                 </div>
                 <div class="flex items-center md:hidden mt-4 md:mt-0">
                     <div class="bg-gray-100 text-center rounded-xl h-10 px-4 py-2 pr-8">
