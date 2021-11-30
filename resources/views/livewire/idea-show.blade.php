@@ -55,18 +55,16 @@
                                     @endcan
 
                                     @can('delete', $idea)
-                                    <li>
-                                        <a
-                                            href="#"
-                                            @click.prevent="
-                                                isOpen = false
-                                                $dispatch('custom-show-delete-modal')
-                                            "
-                                            class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
-                                        >
-                                            Delete Idea
-                                        </a>
-                                    </li>
+                                        <li>
+                                            <a
+                                                href="#"
+                                                @click.prevent="
+                                                    isOpen = false
+                                                    $dispatch('custom-show-delete-modal')"
+                                                class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3">
+                                                Delete Idea
+                                            </a>
+                                        </li>
                                     @endcan
 
                                     <li>
@@ -78,7 +76,7 @@
                                             class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3">
                                             Mark as Spam
                                         </a>
-                                    </li>
+                                     </li>
 
                                     @admin
                                         @if ($idea->spam_reports > 0)
