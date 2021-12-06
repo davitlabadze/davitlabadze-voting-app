@@ -39,11 +39,12 @@ Laracasts Voting is a web application where you can find a lot of ideas posted b
 4. Run the command ```npm run watch``` or ```npm run dev```
 5. Create env file Run the command ```cp .env.example .env```
 6. Run  the command ```php artisan key:generate``` 
-7. Configured database: 
+7. Configured database:
+    
     !['screenshot'](appscreen/database.png)
-9. See Section [ Administrator. ](#administrator) This is a prerequisite for executing the following commands
-10. Run the command  ```php artisan migrate```
-11. Run the command  ```php artisan serve```
+8. See Section [ Administrator. ](#administrator) This is a prerequisite for executing the following commands
+9.  Run the command  ```php artisan migrate```
+10. Run the command  ```php artisan serve```
 
 <a name="administrator"></a>
 
