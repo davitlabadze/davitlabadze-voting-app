@@ -33,7 +33,7 @@ Laracasts Voting is a web application where you can find a lot of ideas posted b
 <a name="iar"></a>
 ## <img src="https://img.icons8.com/color/20/000000/software-installer.png"/> Install and Run
 
-1. Downoad [ZIP](https://github.com/RedberryInternship/davitlabadze-movie-quotes/archive/refs/heads/main.zip) or Clone: ```https://github.com/RedberryInternship/davitlabadze-movie-quotes.git```
+1. Downoad [ZIP](https://github.com/davitlabadze/davitlabadze-voting-app/archive/refs/heads/main.zip) or Clone: ```https://github.com/davitlabadze/davitlabadze-voting-app.git```
 2. Install all dependencies using the ```composer i``` command
 3. Install NPM using the ```npm i``` command
 4. Run the command ```npm run watch``` or ```npm run dev```
